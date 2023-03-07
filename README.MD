@@ -17,13 +17,13 @@ _________________________________________________________________
 
 This is what the app will look like:
 ###Main Page
-![alt main](assets/1.png "1")
-###Index Pahe
-![alt index](assets/2.png "2")
+![alt main](assets/1.PNG "1")
+###Index Page
+![alt index](assets/2.PNG "2")
 ###Detail Page
-![alt detail](assets/3.png "3")
+![alt detail](assets/3.PNG "3")
 ###Adding new doc
-![alt Create](assets/4.png "4")
+![alt Create](assets/4.PNG "4")
 
 _________________________________________________________________
 ## MVP User Stories
