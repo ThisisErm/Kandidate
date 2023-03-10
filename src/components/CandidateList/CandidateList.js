@@ -24,12 +24,12 @@ export default function Candidates() {
   return (
     <>
     <div className="main-page-passport-container">
-      <div className="passport-left passport-page">
-        <h2>My Destinations</h2>
+      <div>
+        <h2>My Candidates</h2>
         <button id ="add-candidate-button-2" onClick={() => setShowForm(true)}>Add Candidate</button>
         {showForm && <CandidateForm onCandidateAdded={handleCandidateAdded} />}
       </div>
-      <div className="passport-right passport-page">
+      <div>
         {candidates.map((candidate, index) => (
         <CandidateListCard candidate={candidate} index={index} key={index} />
         ))}

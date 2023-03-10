@@ -8,9 +8,11 @@ export default function UpdateCandidateForm({ data }) {
     const candidateId = `${data.candidate._id}`
 
     const [candidate, setCandidate] = useState({
-        candidate: `${data.candidate.candidate}`,
-        dateFrom: `${data.candidate.dateFrom}`,
-        dateTo: `${data.candidate.dateTo}`,
+        fullName: `${data.candidate.fullName}`,
+        phoneNumber: `${data.candidate.phoneNumber}`,
+        email: `${data.candidate.email}`,
+        LinkedInProfile: `${data.candidate.LinkedInProfile}`,
+
     })
   
     function handleChange(event) {
@@ -29,33 +31,40 @@ export default function UpdateCandidateForm({ data }) {
     return (
         <div className="update-candidate-form-container">
             <form onSubmit={handleSubmit} id="update-candidate-form">
-                <label>Candidate:</label>
+                <label>Full Name:</label>
                 <input  
-                    name = "candidate"
+                    name = "fullName"
                     type = "text"
                     className= "update-candidate-input"
-                    value = {candidate.candidate}
+                    value = {candidate.fullName}
                     onChange = {handleChange} />
-                <label>From:</label>
+                <label>Phone:</label>
                 <input  
-                    name = "dateFrom"
-                    type = "date"
+                    name = "phoneNumber"
+                    type = "tel"
                     className = "update-candidate-input"
-                    value = {candidate.dateFrom}
+                    value = {candidate.phoneNumber}
                     onChange={handleChange} />
-                <label>To:</label>
+                <label>Email:</label>
                 <input 
-                    name = "dateTo"
-                    type = "date"
+                    name = "email"
+                    type = "email"
                     className = "update-candidate-input"
-                    value = {candidate.dateTo}
-                    onChange={handleChange} />                
+                    value = {candidate.email}
+                    onChange={handleChange} />
+                <label>Linkedin:</label>
+                <input 
+                    name = "LinkedInProfile"
+                    type = "string"
+                    className = "update-candidate-input"
+                    value = {candidate.LinkedInProfile}
+                    onChange={handleChange} />
                 <Link to="/candidates" onClick={handleSubmit}>
-                    <button type="button" id="update-candidate-button">Update Destination</button>
+                    <button type="button" id="update-candidate-button">Update Candidate</button>
                 </Link>
             </form>
             <Link to="/candidates">
-            <button onClick={handleDelete}>Delete Trip
+            <button onClick={handleDelete}>Delete Candidate
             </button>
             </Link>
         </div>

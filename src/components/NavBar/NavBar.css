@@ -1,0 +1,20 @@
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #0077B5; 
+    color: #fff;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .welcome-message {
+    font-weight: bold;
+  }
+  
+  

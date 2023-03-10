@@ -2,16 +2,21 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const candidateSchema = new Schema({
-    candidate: {
+    fullName: {
      type: String,
      required: true
     },
-    dateFrom: {
+    phoneNumber: {
         type: String,
         required: true
     },
-    dateTo: {
-        type: String
+    email: {
+        type: String,
+        required: true
+    },
+    LinkedInProfile: {
+        type: String,
+        required: true
     },
     
     user: {

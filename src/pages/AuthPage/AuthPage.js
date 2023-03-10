@@ -2,6 +2,7 @@ import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import LogInForm from "../../components/LogInForm/LogInForm";
 import { useState } from "react";
 import "./AuthPage.css";
+import logo from "../../images/default.png";
 
 export default function AuthPage({ setUser }) {
   const [showForm, setShowForm] = useState(false);
@@ -9,28 +10,30 @@ export default function AuthPage({ setUser }) {
   return (
     <>
       <div className="auth-page">
-        <h1>Kandidate</h1>
+        <div className="logo"><img src={logo} alt="Kandidate" /></div>
+        
 
-        {showForm ? (
-        <>
-          <LogInForm setUser={setUser} />
-          <p>
-          Need to make an account? <br></br>Sign up {" "}
-          <span className="login-anchor" onClick={() => setShowForm(!showForm)}>
-            <a href="#">here</a>
-          </span>
-        </p>
-        </>
+        {!showForm ? (
+          <>
+            <LogInForm setUser={setUser} />
+            <p>
+              Don't have an account yet? <br />
+              Sign up{" "}
+              <span className="login-anchor" onClick={() => setShowForm(!showForm)}>
+                <a href="#">here</a>
+              </span>
+            </p>
+          </>
         ) : (
-        <>
-          <SignUpForm setUser={setUser} />
-          <p>
-          Already have an account? {" "}
-          <span className="login-anchor" onClick={() => setShowForm(!showForm)}>
-            <a href="#">Login</a>
-          </span>
-        </p>
-        </>
+          <>
+            <SignUpForm setUser={setUser} />
+            <p>
+              Already have an account?{" "}
+              <span className="login-anchor" onClick={() => setShowForm(!showForm)}>
+                <a href="#">Log in</a>
+              </span>
+            </p>
+          </>
         )}
       </div>
     </>

@@ -33,25 +33,15 @@ export default function CandidateDetailPage() {
         <>
             <div className="main-page-container">
                 <div>
-                    <h2>{candidateData.candidate}</h2>
-                    <p>Start Date: {candidateData.dateFrom}</p>
-                    <p>End Date: {candidateData.dateTo}</p>
+                    <h2>{candidateData.fullName}</h2>
+                    <p>Phone: {candidateData.phoneNumber}</p>
+                    <p>Email: {candidateData.email}</p>
+                    <p>{candidateData.LinkedInProfile}</p>
+                    
 
-                    <button id="update-candidate-button-2" onClick={() => setShowForm(!showForm)}>Update Candidate</button> 
+
+                    <button id="update-candidate-button-2" onClick={() => setShowForm(!showForm)}>Edit Candidate</button> 
                     {showForm ? (<UpdateCandidateForm data={data}/>) : " "}
-                </div>
-
-                <div>
-                {
-                    candidateData.note.map((note, index) => {
-                        return(
-                            <> 
-                                {/* <NoteCard notes={note} data={data} key={index} /> */}
-                            </>
-                        )
-                    })
-                }
-                {/* <NoteForm handleAddNote={onAddNote} /> */}
                 </div>
             </div>
         </>

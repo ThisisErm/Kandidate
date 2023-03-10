@@ -25,7 +25,7 @@ const userSchema = new Schema({
     }
 },{
     timestamps: true,
-    //gets rid of password 
+    //removes password 
     toJSON: {
         transform: function(doc, user){
             delete user.password

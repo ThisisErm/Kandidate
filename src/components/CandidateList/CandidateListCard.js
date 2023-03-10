@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom"
-import "./CandidateListCard.css"
+import { Link } from "react-router-dom";
+import "./CandidateListCard.css";
 
-export default function CandidateListCard({ candidate }){
-    
-    return(
-        <>
-        <Link to={`/${candidate.candidate}`} state={{ data: {candidate}}}>
-            <h2>{candidate.candidate}</h2> 
-        </Link> 
-            <span id="start-date-candidate-list-card"><p>Start Date: {candidate.dateFrom}</p></span>
-        </>
-    )
+export default function CandidateListCard({ candidate }) {
+  console.log(candidate);
+  
+  return (
+    <div className="card-container">
+      <Link to={`/${candidate.fullName}`} state={{ data: { candidate } }}>
+        <h2>{candidate.fullName}</h2>
+      </Link>
+    </div>
+  );
 }
