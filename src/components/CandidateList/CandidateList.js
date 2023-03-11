@@ -23,7 +23,7 @@ export default function Candidates() {
 
   return (
     <>
-    <div className="main-page-passport-container">
+    <div className="candidate-list-container">
       <div>
         <h2>My Candidates</h2>
         <button id ="add-candidate-button-2" onClick={() => setShowForm(true)}>Add Candidate</button>

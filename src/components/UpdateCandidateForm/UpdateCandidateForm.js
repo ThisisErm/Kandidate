@@ -64,7 +64,7 @@ export default function UpdateCandidateForm({ data }) {
                 </Link>
             </form>
             <Link to="/candidates">
-            <button onClick={handleDelete}>Delete Candidate
+            <button className="delete" onClick={handleDelete}>Delete Candidate
             </button>
             </Link>
         </div>

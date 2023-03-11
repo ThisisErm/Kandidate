@@ -30,13 +30,37 @@
     color: rgba(0, 0, 0, 0.9);
   }
   
+  [type="tel"] {
+    /* add styles for phone input */
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #f3f2ef;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  
+  [type="string"] {
+    /* add styles for LinkedIn input */
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #f3f2ef;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  
   #update-candidate-button {
     width: 100%;
     padding: 10px;
     margin-top: 20px;
     border: none;
     border-radius: 3px;
-    background-color: #0077b5;
+    background-color: #0a66c2;
     color: #fff;
     font-size: 16px;
     font-weight: 600;
@@ -52,7 +76,7 @@
     border: none;
     border-radius: 3px;
     background-color: transparent;
-    color: #0077b5;
+    color: #0a66c2;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;

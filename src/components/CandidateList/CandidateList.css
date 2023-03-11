@@ -1,4 +1,4 @@
-.main-page-passport-container {
+.candidate-list-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -7,20 +7,20 @@
     padding: 40px 20px;
   }
   
-  .main-page-passport-container h2 {
+  .candidate-list-container h2 {
     font-size: 2rem;
     font-weight: 600;
     margin: 0 0 20px;
   }
   
-  .main-page-passport-container > div {
+  .candidate-list-container > div {
     width: 100%;
   }
   
   #add-candidate-button-2 {
-    background-color: #0077b5;
+    background-color: #0a66c2;
     border: none;
-    border-radius: 2px;
+    border-radius: 30px;
     color: #fff;
     cursor: pointer;
     font-size: 1.6rem;
@@ -65,7 +65,7 @@
   }
   
   #add-candidate-button {
-    background-color: #0077b5;
+    background-color: #0a66c2;
     border: none;
     border-radius: 2px;
     color: #fff;
