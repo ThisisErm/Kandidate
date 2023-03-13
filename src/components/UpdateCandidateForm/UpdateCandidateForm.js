@@ -30,12 +30,11 @@ export default function UpdateCandidateForm({ data }) {
 
     return (
         <div className="update-candidate-form-container">
-            <form onSubmit={handleSubmit} id="update-candidate-form">
+            <form onSubmit={handleSubmit}>
                 <label>Full Name:</label>
                 <input  
                     name = "fullName"
                     type = "text"
-                    className= "update-candidate-input"
                     value = {candidate.fullName}
                     onChange = {handleChange} />
                 <label>Phone:</label>
@@ -49,7 +48,6 @@ export default function UpdateCandidateForm({ data }) {
                 <input 
                     name = "email"
                     type = "email"
-                    className = "update-candidate-input"
                     value = {candidate.email}
                     onChange={handleChange} />
                 <label>Linkedin:</label>

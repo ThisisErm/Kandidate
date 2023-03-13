@@ -25,9 +25,7 @@ form {
   margin-bottom: 20px;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"] {
+/* input {
   width: 320px;
   height: 56px;
   border: none;
@@ -37,7 +35,7 @@ input[type="email"] {
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 500;
-}
+} */
 
 button[type="submit"] {
   width: 320px;
@@ -74,14 +72,6 @@ p {
 @media (max-width: 600px) {
   h1 {
     font-size: 36px;
-  }
-
-  input[type="text"],
-  input[type="password"],
-  input[type="email"] {
-    width: 280px;
-    height: 48px;
-    font-size: 16px;
   }
 
   button[type="submit"] {

@@ -37,6 +37,8 @@
         //-------API Routes here, before the catch all--------------
         app.use("/api/users", require("./routes/api/users"))
         app.use("/api/candidates", require("./routes/api/candidates"))
+        app.use("/api/roles", require("./routes/api/roles"))
+
         
         
             // The following "catch all" route (note the *) is necessary

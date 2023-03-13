@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import "./CandidateListCard.css";
 
 export default function CandidateListCard({ candidate }) {
-  console.log(candidate);
-  
+ 
   return (
     <div className="card-container">
       <Link to={`/${candidate.fullName}`} state={{ data: { candidate } }}>

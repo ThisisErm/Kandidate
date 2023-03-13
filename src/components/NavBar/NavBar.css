@@ -6,6 +6,7 @@
     padding: 1rem;
     background-color: #0A66C2; 
     color: #fff;
+    font-size: large;
   }
   
   .nav-link {
@@ -13,8 +14,5 @@
     color: #fff;
   }
   
-  .welcome-message {
-    font-weight: bold;
-  }
   
   

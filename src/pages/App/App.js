@@ -2,6 +2,8 @@ import { useState } from "react"
 import { Routes, Route, Navigate } from "react-router-dom"
 import Candidates from "../Candidates/Candidates";
 import CandidateDetailPage from "../CandidateDetailPage/CandidateDetailPage";
+import Roles from "../Roles/Roles";
+import RoleDetailPage from "../RoleDetailPage/RoleDetailPage";
 import AuthPage from "../AuthPage/AuthPage"
 import NavBar from "../../components/NavBar/NavBar";
 import './App.css';
@@ -23,6 +25,8 @@ export default function App() {
           <Routes >
             <Route path="/candidates" element={<Candidates />} />
             <Route path=":candidate" element={<CandidateDetailPage />} />
+            <Route path="/roles" element={<Roles />} />
+            <Route path="/roles/:role" element={<RoleDetailPage />} />
             <Route path="/*" element={<Navigate to="/candidates" />} />
           </Routes> 
         </> 
