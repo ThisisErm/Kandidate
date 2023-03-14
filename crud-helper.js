@@ -5,6 +5,8 @@ require("./config/database")
 
 const user = require("./models/user")
 const candidates = require("./models/candidates")
+const roles = require("./models/roles")
+
 
 //cosnt Item = require("./models/item")
 // const Category = require('./models/category')

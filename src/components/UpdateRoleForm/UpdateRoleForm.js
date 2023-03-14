@@ -28,18 +28,24 @@ export default function UpdateRoleForm({ data }) {
   }, []);
 
   function handleChange(event) {
-    const { name, options } = event.target;
-    const selectedValues = Array.from(options).filter(option => option.selected).map(option => option.value);
-    setRole({ ...role, [name]: selectedValues });
+    const { name, value } = event.target;
+    if (name === 'candidates') {
+      const selectedCandidates = Array.from(event.target.options)
+        .filter((option) => option.selected)
+        .map((option) => option.value);
+      setRole({ ...role, candidates: selectedCandidates });
+    } else {
+      setRole({ ...role, [name]: value });
+    }
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    rolesAPI.updateRole(role, roleId);
+    await rolesAPI.updateRole(role, roleId);
   }
 
-  function handleDelete() {
-    rolesAPI.deleteRole(roleId);
+  async function handleDelete() {
+    await rolesAPI.deleteRole(roleId);
   }
 
   return (
@@ -54,6 +60,7 @@ export default function UpdateRoleForm({ data }) {
         />
         <label>Description:</label>
         <textarea
+          className="description"
           name="jobDescription"
           value={role.jobDescription}
           onChange={handleChange}
@@ -74,13 +81,17 @@ export default function UpdateRoleForm({ data }) {
         />
         <label>Candidates:</label>
         <select
+          className="options"
           name="candidates"
           multiple
-          value={role.candidates}
           onChange={handleChange}
+          value={role.candidates}
         >
           {candidates.map((candidate) => (
-            <option key={candidate._id} value={candidate._id}>
+            <option
+              key={candidate._id}
+              value={candidate._id}
+            >
               {candidate.fullName}
             </option>
           ))}

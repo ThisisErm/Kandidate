@@ -1,4 +1,4 @@
-
+ 
   nav {
     display: flex;
     justify-content: space-between;
@@ -9,10 +9,13 @@
     font-size: large;
   }
   
+  
   .nav-link {
     text-decoration: none;
     color: #fff;
-  }
+  } 
+
+
   
   
-  
+ 

@@ -57,11 +57,7 @@ export default function RoleForm({ onRoleAdded }) {
             value={role.salary}
             onChange={handleChange}
           />
-          <label className="add-role-label">Candidates:</label>
-          {/* 
-          This is where you can add a list of candidates to select from or add new candidates using the CandidateForm component. 
-          */}
-          <button type="submit" id="add-role-button">
+                  <button type="submit" id="add-role-button">
             Add new role
           </button>
         </form>

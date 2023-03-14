@@ -1,6 +1,7 @@
 import sendRequest from './send-request';
 
-const BASE_URL = '/api/roles';
+const BASE_URL = 'http://localhost:3001/api/roles';
+const CANDIDATES_BASE_URL = '/api/candidates';
 
 // GET roles
 export function getRoles() {
@@ -8,8 +9,10 @@ export function getRoles() {
 }
 
 // GET role by ID
-export function getRoleById(roleId) {
-  return sendRequest(`${BASE_URL}/${roleId}`);
+export async function getRoleById(roleId) {
+  const role = await sendRequest(`${BASE_URL}/${roleId}`);
+  const populatedRole = await populateCandidates(role);
+  return populatedRole;
 }
 
 // POST role
@@ -25,4 +28,16 @@ export function updateRole(role, roleId) {
 // DELETE role by ID
 export function deleteRole(roleId) {
   return sendRequest(`${BASE_URL}/${roleId}`, 'DELETE');
+}
+
+async function populateCandidates(role) {
+  const populatedCandidates = await Promise.all(role.candidates.map(async (candidateId) => {
+    const candidate = await getCandidateById(candidateId);
+    return candidate;
+  }));
+  return { ...role, candidates: populatedCandidates };
+}
+
+async function getCandidateById(candidateId) {
+  return await sendRequest(`${CANDIDATES_BASE_URL}/${candidateId}`);
 }

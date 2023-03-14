@@ -16,12 +16,13 @@ const roleSchema = new Schema({
     required: true
   },
   salary: {
-    type: String,
+    type: Number,
     required: true
   },
   candidates: [{
     type: Schema.Types.ObjectId,
-    ref: 'Candidate'
+    ref: 'Candidate',
+    required: false
   }],
   owner: {
     type: Schema.Types.ObjectId,
