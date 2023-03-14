@@ -1,6 +1,6 @@
 import sendRequest from "./send-request"
 
-const BASE_URL = "https://kandidate.onrender.com//api/candidates"
+const BASE_URL = "https://kandidate.onrender.com/api/candidates"
 
     //GET candidates
 export function getCandidate() {
