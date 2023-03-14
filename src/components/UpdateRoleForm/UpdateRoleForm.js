@@ -96,7 +96,7 @@ export default function UpdateRoleForm({ data }) {
             </option>
           ))}
         </select>
-        <Link to={`/roles/${role.jobTitle}`} state={{ data: { role } }}> onClick={handleSubmit}
+        <Link to="/roles" onClick={handleSubmit}>
           <button type="button" id="update-role-button">
             Update Role
           </button>
