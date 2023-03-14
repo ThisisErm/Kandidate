@@ -42,7 +42,6 @@ export default function UpdateRoleForm({ data }) {
   async function handleSubmit(event) {
     event.preventDefault();
     await rolesAPI.updateRole(role, roleId);
-    <Link to={`/roles/${role.jobTitle}`} state={{ data: { role } }}></Link>
   }
 
   async function handleDelete() {
