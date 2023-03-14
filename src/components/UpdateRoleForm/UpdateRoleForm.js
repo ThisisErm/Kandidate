@@ -42,6 +42,7 @@ export default function UpdateRoleForm({ data }) {
   async function handleSubmit(event) {
     event.preventDefault();
     await rolesAPI.updateRole(role, roleId);
+    window.location.reload()
   }
 
   async function handleDelete() {
