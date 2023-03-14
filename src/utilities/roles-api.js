@@ -1,6 +1,6 @@
 import sendRequest from './send-request';
 
-const BASE_URL = 'http://localhost:3001/api/roles';
+const BASE_URL = 'https://kandidate.onrender.com/api/roles';
 const CANDIDATES_BASE_URL = '/api/candidates';
 
 // GET roles
