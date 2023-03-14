@@ -42,7 +42,6 @@ export default function UpdateRoleForm({ data }) {
   async function handleSubmit(event) {
     event.preventDefault();
     await rolesAPI.updateRole(role, roleId);
-    window.location.reload()
   }
 
   async function handleDelete() {
@@ -97,7 +96,7 @@ export default function UpdateRoleForm({ data }) {
             </option>
           ))}
         </select>
-        <Link to="/roles" onClick={handleSubmit}>
+        <Link to={`/roles/${role.jobTitle}`} state={{ data: { role } }}> onClick={handleSubmit}
           <button type="button" id="update-role-button">
             Update Role
           </button>
