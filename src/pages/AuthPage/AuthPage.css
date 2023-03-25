@@ -10,10 +10,6 @@
   width: 433px;
  }
 
- p {
-  color: #fff;
- }
-
 .logo {
     display: flex;
     flex-direction: column;
@@ -38,6 +34,7 @@ form {
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 
@@ -71,6 +68,7 @@ p {
   margin-top: 20px;
   margin-bottom: 0px;
   text-align: center;
+  color: #fff;
 }
 
 @media (max-width: 600px) {
