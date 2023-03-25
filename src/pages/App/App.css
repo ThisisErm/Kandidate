@@ -1,9 +1,17 @@
 body {
     background-image: url(https://wallpapercave.com/wp/wp2019259.jpg);
     background-size: cover;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; */
-  }
-  
+}
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: 300%;
+        background-position: top;
+    }
+}
+
+/* @media only screen and (min-width: 601px) {
+    body {
+        background-size: 300%;
+        background-position: center;
+    }
+} */
