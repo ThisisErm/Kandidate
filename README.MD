@@ -1,4 +1,4 @@
-# Kandidate Tracker
+# Kandidate
 A candidate tracking app for recruiters and HR professionals. Simplify your hiring process by having a single place to save potential candidates for the roles you're looking to fill.
 _________________________________________________________________
 ## Technologies used:
@@ -32,7 +32,7 @@ This is what the app looks like:
 ![alt Create](assets/4.PNG "4")
 ### Update Page
 ![alt Create](assets/5.PNG "4")
-### add Page
+### Add Page
 ![alt Create](assets/6.PNG "4")
 ### ERD
 ![alt Create](assets/ERD.PNG "4")

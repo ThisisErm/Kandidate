@@ -29,19 +29,18 @@ export default function RoleDetailPage() {
           <p>Salary: ${roleData.salary}</p>
           <h3>Candidates:</h3>
           {roleData.candidates && roleData.candidates.length > 0 ? (
-  <ul>
-    {roleData.candidates.map((candidate) => {
-      // console.log({candidate});
-      return (
-        <Link to={`/${candidate.fullName}`} state={{ data: { candidate } }}>
-        <li>{candidate.fullName}</li>
-      </Link>
-      );
-    })}
-  </ul>
-) : (
-  <p>No candidates yet.</p>
-)}
+            <ul>
+              {roleData.candidates.map((candidate) => {
+                return (
+                  <Link to={`/${candidate.fullName}`} state={{ data: { candidate } }}>
+                    <li>{candidate.fullName}</li>
+                  </Link>
+                );
+              })}
+            </ul>
+          ) : (
+            <p>No candidates yet.</p>
+          )}
 
           <button id="update-role-button-2" onClick={() => setShowForm(!showForm)}>Edit Role</button>
           {showForm ? (<UpdateRoleForm data={data} />) : " "}

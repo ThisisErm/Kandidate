@@ -2,8 +2,6 @@ import { useLocation } from "react-router-dom"
 import { useEffect, useState } from "react"
 import UpdateCandidateForm from "../../components/UpdateCandidateForm/UpdateCandidateForm"
 import * as candidatesAPI from "../../utilities/candidate-api"
-// import NoteForm from "../../components/NoteForm/NoteForm"
-// import NoteCard from "../../components/NoteCard/NoteCard"
 import './CandidateDetailPage.css'
 
 export default function CandidateDetailPage() {
@@ -12,7 +10,7 @@ export default function CandidateDetailPage() {
     const { data } = candidate.state
 
     const [showForm, setShowForm] = useState(false)
-    const [candidateData, setCandidateData] = useState({ note: [] })
+    const [candidateData, setCandidateData] = useState({ })
 
     useEffect(function () {
         async function show() {
@@ -22,13 +20,7 @@ export default function CandidateDetailPage() {
         show()
     }, [])
 
-    // function onAddNote(newNote) {
-    //     let notes = [...candidateData.note, newNote];
-    //     setCandidateData({ ...candidateData, note: notes });
-    // }
 
-    //implement in version 2
-    //function onUpdateNote(note) {}
     return (
         <>
             <div className="main-page-container">

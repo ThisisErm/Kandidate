@@ -10,31 +10,32 @@ export default function AuthPage({ setUser }) {
   return (
     <>
       <div className="auth-page">
-        <div className="logo"><img src={logo} alt="Kandidate" /></div>
-        
+        <div className="form-container">
+          <div className="logo"><img src={logo} alt="Kandidate" /></div>
 
-        {!showForm ? (
-          <>
-            <LogInForm setUser={setUser} />
-            <p>
-              Don't have an account yet? <br />
-              Sign up{" "}
-              <span className="login-anchor" onClick={() => setShowForm(!showForm)}>
-                <a href="#">here</a>
-              </span>
-            </p>
-          </>
-        ) : (
-          <>
-            <SignUpForm setUser={setUser} />
-            <p>
-              Already have an account?{" "}
-              <span className="login-anchor" onClick={() => setShowForm(!showForm)}>
-                <a href="#">Log in</a>
-              </span>
-            </p>
-          </>
-        )}
+          {!showForm ? (
+            <>
+              <LogInForm setUser={setUser} />
+              <p>
+                Don't have an account yet? <br />
+                Sign up{" "}
+                <span className="login-anchor" onClick={() => setShowForm(!showForm)}>
+                  <a href="#">here</a>
+                </span>
+              </p>
+            </>
+          ) : (
+            <>
+              <SignUpForm setUser={setUser} />
+              <p>
+                Already have an account?{" "}
+                <span className="login-anchor" onClick={() => setShowForm(!showForm)}>
+                  <a href="#">Log in</a>
+                </span>
+              </p>
+            </>
+          )}
+        </div>
       </div>
     </>
   );
