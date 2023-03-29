@@ -16,7 +16,6 @@ const candidateSchema = new Schema({
     },
     LinkedInProfile: {
         type: String,
-        required: true
     },
     
     user: {
