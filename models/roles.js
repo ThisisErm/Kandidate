@@ -22,7 +22,6 @@ const roleSchema = new Schema({
   candidates: [{
     type: Schema.Types.ObjectId,
     ref: 'Candidate',
-    required: false
   }],
   owner: {
     type: Schema.Types.ObjectId,
